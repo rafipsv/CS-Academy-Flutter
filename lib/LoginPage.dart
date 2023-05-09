@@ -1,10 +1,9 @@
 // ignore_for_file: file_names
 
-import 'package:cs_flutter/LoginPage.dart';
 import 'package:flutter/material.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class LoginPage extends StatelessWidget {
+  const LoginPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,21 +15,14 @@ class HomePage extends StatelessWidget {
           const SizedBox(
             height: 200,
           ),
-          const Text("HomePage"),
+          const Text("LoginPage"),
           const SizedBox(
             height: 100,
           ),
           Center(
             child: ElevatedButton(
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return const LoginPage();
-                    },
-                  ),
-                );
+                Navigator.pop(context);
               },
               child: const Text("Navigate Me"),
             ),
